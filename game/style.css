@@ -1,0 +1,74 @@
+/* style.css - FOXFIRE DUEL's marsh-night look: deep green felt, lantern
+   amber, cards as cream paper with a kind-coloured band. */
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: #f3ead2;
+  font-family: Georgia, "Times New Roman", serif;
+  background: radial-gradient(1200px 700px at 50% 20%, #1d4034 0%, #0d231c 60%, #071511 100%);
+}
+#app { max-width: 1180px; margin: 0 auto; padding: 18px 22px 26px; }
+h1 { text-align: center; letter-spacing: 3px; font-size: 44px; margin: 8px 0 4px; color: #ffcf6e; }
+.tagline { text-align: center; font-size: 19px; opacity: .92; }
+.title-fox { text-align: center; font-size: 54px; color: #ffb340; text-shadow: 0 0 26px #ff9d2e; }
+.screen { display: flex; flex-direction: column; gap: 14px; }
+.title-screen { align-items: center; padding-top: 46px; }
+.title-cards { display: flex; gap: 18px; margin: 12px 0; }
+.rules-line { max-width: 640px; text-align: center; font-size: 16px; line-height: 1.5; opacity: .9; }
+.hint { opacity: .65; font-size: 14px; }
+.big-btn, .end-btn {
+  font: inherit; cursor: pointer; border: 2px solid #ffcf6e; color: #221806;
+  background: linear-gradient(#ffd97e, #f5ae3c); border-radius: 10px;
+  padding: 12px 30px; font-size: 19px; font-weight: bold;
+  box-shadow: 0 4px 0 #9a6a1d, 0 8px 22px rgba(0,0,0,.45); transition: transform .12s ease;
+}
+.big-btn:hover, .end-btn:hover { transform: translateY(-2px); }
+.end-btn { padding: 8px 18px; font-size: 16px; }
+
+.side-row { display: flex; flex-direction: column; gap: 8px; }
+.side-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.side-name { font-weight: bold; letter-spacing: 2px; color: #ffcf6e; }
+.life { display: inline-flex; gap: 14px; font-size: 18px; }
+.life-num { color: #ff8d7e; font-weight: bold; }
+.shield-num { color: #9ec2ff; }
+.deck-num, .ember-num, .turn-num { opacity: .85; }
+.ember-num { color: #ffc46e; font-weight: bold; }
+.hand { display: flex; gap: 12px; min-height: 168px; align-items: flex-start; }
+.hand-player { justify-content: center; }
+.hand-foe { justify-content: center; }
+
+.intent {
+  text-align: center; font-size: 18px; color: #ffd98a;
+  border: 1px solid rgba(255,207,110,.4); border-radius: 8px; padding: 7px 10px;
+  background: rgba(0,0,0,.25);
+}
+.log { min-height: 66px; text-align: center; font-size: 15px; opacity: .85; line-height: 1.45; }
+
+.card {
+  width: 128px; height: 168px; border-radius: 12px; padding: 9px 10px;
+  background: linear-gradient(#fdf6dd, #efe0b8); color: #2a2118;
+  border: 3px solid var(--kind, #888); display: flex; flex-direction: column; gap: 3px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.4); transition: transform .15s ease, box-shadow .15s ease;
+}
+.card.playable { cursor: pointer; }
+.card.playable:hover { transform: translateY(-10px) scale(1.04); box-shadow: 0 16px 26px rgba(0,0,0,.5); }
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.card-cost {
+  background: var(--kind); color: #fff; font-weight: bold; border-radius: 50%;
+  width: 27px; height: 27px; display: grid; place-items: center; font-size: 16px;
+}
+.card-shape { color: var(--kind); font-size: 19px; }
+.card-name { font-weight: bold; font-size: 15.5px; line-height: 1.15; }
+.card-art { font-size: 37px; text-align: center; color: var(--kind); line-height: 1.1; }
+.card-text { font-size: 12.5px; line-height: 1.3; flex: 1; }
+.card-kind { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--kind); font-weight: bold; }
+.card-back {
+  background: repeating-linear-gradient(45deg, #274b3a 0 12px, #1d3a2d 12px 24px);
+  border-color: #c9a44e; color: #ffcf6e; align-items: center; justify-content: center; gap: 6px;
+}
+.back-mark { font-size: 40px; text-shadow: 0 0 16px #ff9d2e; }
+.back-name { letter-spacing: 3px; font-size: 13px; font-weight: bold; }
+
+.end-screen { align-items: center; padding-top: 60px; text-align: center; }
+.end-screen.lost h1 { color: #9ec2ff; }
+.end-stats { display: flex; gap: 34px; font-size: 18px; }
